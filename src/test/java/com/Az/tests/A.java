@@ -10,7 +10,7 @@ public class A {
 	
 	
 	@Test
-	public void display() {
+	public void display() throws InterruptedException {
 		
 		System.out.println("Launching Google ");
 		
@@ -19,6 +19,7 @@ public class A {
 		driver.manage().window().maximize();
 		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://www.google.com");
+		Thread.sleep(5000);
 		String pageTitle = driver.getTitle();
 		System.out.println(pageTitle);
 		driver.close();
